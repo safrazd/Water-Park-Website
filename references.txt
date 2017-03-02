@@ -1,0 +1,16 @@
+References
+1) About Us (about.html) contains a jQuery JavaScript file used to cause a sound action
+     to occur when hovering over a  phone icon. This jQuery file  was obtained from a jQuery 
+    JavaScript library 
+and was copyrighted by John Resign. This library file was released under 
+    the MIT
+ license which allows for almost no restrictions on what you can do with a jQuery project.
+
+2) The  Water Tren(watertren.html), Toy  Bay(toybay.html) and Splash Gifts(splashgifts.html) webpages
+each contained two JavaScript files used to create  a slideshow. This file was obtained at JavaScript Kit (www.javascriptkit.com).
+
+The usage terms are:one may freely use any scripts found in their library on personal 
+and commercial websites.
+
+3)The Home Page(index.html) and Media Page(media.html) contained two interactive slideshows which were not possible without
+a JavaScript file which was obtained from  a YouTube channel, Manase Gecz. Manase Gecz shares his source codes publicly.

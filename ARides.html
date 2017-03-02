@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title> Adult Rides </title>
+	<link rel="stylesheet" type="text/css" href="norm.css">
+	<link rel="stylesheet" type="text/css" href="Rides.css">
+	<script>
+		function ChangeRide(obj) 
+		{ var crs = document.getElementsByClassName("cr");
+			for (var i = 0; i < crs.length; i++)
+				{
+				  crs[i].checked = false;
+				}
+		  obj.checked = true;
+		}
+	</script>
+</head>
+
+<body>
+	<header>
+	   <img src="UWPHeader.gif" alt="HTML5 Icon" style="border:solid blue 1px; z-index:1; position:absolute; top:10px; left:145px; width:1027px; height:135px">
+	</header>
+	
+	<div id="wrapper">
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a>Products and Services</a>
+					<ul>
+						<li><a href="Rides.html">Rides</a></li>
+						<li><a href="Outlets.html">Outlets</a></li>
+						<li><a href="merchandise.html">Merchandise</a></li>
+					</ul>
+				</li>
+				<li><a href="media.html">Media</a></li>		
+				<li><a href="environment.html">Environment</a></li>
+				<li><a href="contact.html">Contact Us</a></li>
+				<li><a href="about.html">About Us</a></li>
+			</ul>			
+		</nav>
+	</div>
+	
+	<div>
+		<img id="right" src="UWPRidesLogo.gif" style="position:absolute; top:210px; left:400px; width:600px; height:540px;">
+	</div>
+	
+	<!--GHOST SHIP-->
+	<div style="position:relative; top:60px; left:60px;">
+		<div class="thumbnail">
+			<input class="cr" type="checkbox" id="opt1" onchange="ChangeRide(this)">
+			<label for="opt1" > <img src="GSIcon.png" width="100px" height="100px" style="left:80px; border:solid blue 1px;"> </label>
+			<span style="background-color:Grey ;" class="SpanToggle" style="position:relative;">
+				<div id="left">
+					<audio id="GSplayer" src="GSTheme.ogg" loop></audio>
+					<img src="ThemeMusicMascot.gif" style="position:absolute; width:15px; height:30px; top:2px; left:490px;">
+					<img src="ThemeMusicLogo.gif" style="position:absolute; width:200px; height:33px; top:5px; left:510px;">
+					<img src="ThemeMusicMascot.gif" style="position:absolute; width:15px; height:30px; top:2px; left:785px;">
+					<button onclick="document.getElementById('GSplayer').play()" style="position:relative; top:10px; left:715px;"> <img src="ThemePlay.png" width="15px" height="15px" > </button>
+					<button onclick="document.getElementById('GSplayer').pause()" style="position:relative; top:10px; left:710px;"> <img src="ThemePause.png" width="15px" height="15px" > </button> <br/>
+					<img src="GS.gif" style="position:relative; width:550px; height:90px;">
+					<img src="WaterArrow.gif" style="position:relative; top:25px; left:70px; width:200px; height:105px;">
+					<p style="color:White; font:15px Papyrus;"> 
+						Known as the creepy relative to pirates cove, it features many slides that pass<br/>
+						through dark tunnels where the howls and wails of dead pirates can be heard.<br/>
+						There's also a secret tunnel that exits at Black Beards skull cave!.
+					</p>
+					<img src="GSRide.jpg" style="width:820px; height:380px; border:solid blue 1px;">
+				</div>
+				
+				<div id="right" style="position:absolute; left:830px; background-color:Black; height:615px; border:solid Gold 2px; border-radius:20px;">
+					<img src="GSmsg.gif" style="width:810px; height:380px;"> <br/>
+					<img src="BuyTickets.gif" style="border:solid red 1px; position:relative; left:70px;">
+					<a href="merchandise.html" target="_blank"><img  src="BuyMerchandise.gif" style="border:solid purple 1px; position:relative; left:150px; top:10px;"></a>
+				</div>
+			</span>			
+		</div>
+	</div>
+	<!--LOVERS LANE-->
+	<div style="position:relative; top:60px; left:60px;">
+		<div class="thumbnail">
+			<input class="cr" type="checkbox" id="opt2" onchange="ChangeRide(this)">
+			<label for="opt2"> <img src="LLIcon.png" width="100px" height="100px" style="left:80px; border:solid blue 1px;"> </label>
+			<span style="background-color:Pink;" class="SpanToggle">
+				<div id="left">
+					<audio id="LLplayer" src="LLTheme.ogg" loop></audio>
+					<img src="ThemeMusicMascot.gif" style="position:absolute; width:15px; height:30px; top:2px; left:490px;">
+					<img src="ThemeMusicLogo.gif" style="position:absolute; width:200px; height:33px; top:5px; left:510px;">
+					<img src="ThemeMusicMascot.gif" style="position:absolute; width:15px; height:30px; top:2px; left:785px;">
+					<button onclick="document.getElementById('LLplayer').play()" style="position:relative; top:10px; left:715px;"> <img src="ThemePlay.png" width="15px" height="15px" > </button>
+					<button onclick="document.getElementById('LLplayer').pause()" style="position:relative; top:10px; left:710px;"> <img src="ThemePause.png" width="15px" height="15px" > </button> <br/>
+					<img src="LL.gif" style="position:relative; width:550px; height:90px;">
+					<img src="WaterArrow.gif" style="position:relative; top:25px; left:70px; width:200px; height:105px;">
+					<p style="color:Magenta; font:18px Curlz MT;"> 
+						A calm, quiet and romantic ride down the "love tunnel" for you and that special<br/>
+						someone. It features a slow boat ride down a brightly lit tunnel. Its a great<br/>
+						escape from the usual fast paced rides<br/>
+					</p>
+					<img src="LLRide.jpg" style="width:820px; height:380px; border:solid blue 1px;">
+				</div>
+				
+				<div id="right" style="position:absolute; left:830px; background-color:Black; height:618px; border:solid Gold 2px; border-radius:20px;">
+					<img src="LLmsg.gif" style="width:810px; height:380px;"> <br/>
+					<img src="BuyTickets.gif" style="border:solid red 1px; position:relative; left:70px;">
+					<a href="merchandise.html" target="_blank"><img  src="BuyMerchandise.gif" style="border:solid purple 1px; position:relative; left:150px; top:10px;"></a>
+				</div>
+			</span>		
+		</div>
+	</div>
+	<!--SHOCK WAVE-->
+	<div style="position:relative; top:60px; left:60px;">
+		<div class="thumbnail">
+			<input class="cr" type="checkbox" id="opt3" onchange="ChangeRide(this)">
+			<label for="opt3"> <img src="SWIcon.png" width="100px" height="100px" style="left:80px; border:solid blue 1px;"> </label>
+			<span style="background-color:SteelBlue ;" class="SpanToggle">
+				<div id="left">
+					<audio id="SWplayer" src="SWTheme.ogg" loop></audio>
+					<img src="ThemeMusicMascot.gif" style="position:absolute; width:15px; height:30px; top:2px; left:490px;">
+					<img src="ThemeMusicLogo.gif" style="position:absolute; width:200px; height:33px; top:5px; left:510px;">
+					<img src="ThemeMusicMascot.gif" style="position:absolute; width:15px; height:30px; top:2px; left:785px;">
+					<button onclick="document.getElementById('SWplayer').play()" style="position:relative; top:10px; left:715px;"> <img src="ThemePlay.png" width="15px" height="15px" > </button>
+					<button onclick="document.getElementById('SWplayer').pause()" style="position:relative; top:10px; left:710px;"> <img src="ThemePause.png" width="15px" height="15px" > </button> <br/>
+					<img src="SW.gif" style="position:relative; width:550px; height:90px;">
+					<img src="WaterArrow.gif" style="position:relative; top:25px; left:70px; width:200px; height:105px;">
+					<p style="color:DarkBlue ; font:20px Magneto;"> 
+						One of the more intense rides, it features an expansive beach area<br/>
+						with a powerful wave generator. It is seldom used as competition<br/>
+						by many visitors. Now you can finally settle the score of who's<br>
+						the better swimmer.
+					</p>
+					<img src="SWRide.jpg" style="width:820px; height:380px; border:solid blue 1px;">
+				</div>
+				
+				<div id="right" style="position:absolute; left:830px; background-color:Black; height:650px; border:solid Gold 2px; border-radius:20px;">
+					<img src="SWmsg.gif" style="width:810px; height:380px;"> <br/>
+					<img src="BuyTickets.gif" style="border:solid red 1px; position:relative; left:70px;">
+					<a href="merchandise.html" target="_blank"><img  src="BuyMerchandise.gif" style="border:solid purple 1px; position:relative; left:150px; top:10px;"></a>
+				</div>
+			</span>		
+		</div>
+	</div>
+	<!--VOLCANO-->
+	<div style="position:relative; top:60px; left:60px;">
+		<div class="thumbnail">
+			<input class="cr" type="checkbox" id="opt4" onchange="ChangeRide(this)">
+			<label for="opt4"> <img src="VIcon.png" width="100px" height="100px" style="left:80px; border:solid blue 1px;"> </label>
+			<span style="background-color:Tomato;" class="SpanToggle">
+				<div id="left">
+					<audio id="Vplayer" src="VTheme.ogg" loop></audio>
+					<img src="ThemeMusicMascot.gif" style="position:absolute; width:15px; height:30px; top:2px; left:490px;">
+					<img src="ThemeMusicLogo.gif" style="position:absolute; width:200px; height:33px; top:5px; left:510px;">
+					<img src="ThemeMusicMascot.gif" style="position:absolute; width:15px; height:30px; top:2px; left:785px;">
+					<button onclick="document.getElementById('Vplayer').play();Vplayer.volume = 0.2;" style="position:relative; top:10px; left:715px;"> <img src="ThemePlay.png" width="15px" height="15px" > </button>
+					<button onclick="document.getElementById('Vplayer').pause()" style="position:relative; top:10px; left:710px;"> <img src="ThemePause.png" width="15px" height="15px" > </button> <br/>
+					<img src="V.gif" style="position:relative; right:10px; width:550px; height:90px;">
+					<img src="WaterArrow.gif" style="position:relative; top:25px; left:70px; width:200px; height:105px;">
+					<p style="color:FireBrick; font:15px Jokerman;"> 
+						A fast paced Hawaiian themed ride that features many slides<br/>
+						that all converge into a giant jacuzzi!. It is a "hybrid" of<br/>
+						rides here that combines excitement and calm relief, come<br>
+						experience the best of both worlds. 
+					</p>
+					<img src="VRide.jpg" style="width:820px; height:380px; border:solid blue 1px;">
+				</div>
+				
+				<div id="right" style="position:absolute; left:830px; background-color:Black; height:633px; border:solid Gold 2px; border-radius:20px;">
+					<img src="Vmsg.gif" style="width:810px; height:380px;"> <br/>
+					<img src="BuyTickets.gif" style="border:solid red 1px; position:relative; left:70px;">
+					<a href="merchandise.html" target="_blank"><img  src="BuyMerchandise.gif" style="border:solid purple 1px; position:relative; left:150px; top:10px;"></a>
+				</div>
+			</span>		
+		</div>
+	</div>
+</html>

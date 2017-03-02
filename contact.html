@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>Contact Us</title>
+	<link rel="stylesheet" type="text/css" href="norm.css">
+<style>
+
+#contactpic {
+width:75%;
+height:60%;
+position:absolute;
+top:250px;
+left:149px;
+z-index:-1;
+}
+
+#bar
+{
+    display:block;
+    background-color:rgba(0, 0, 0, 0.8);
+    width:75%;
+    height:5%;
+    position:absolute;
+    bottom:-13px;
+    left:149px;
+	z-index:1;
+}
+h1 {
+font-size:36px;
+color:#2E64FE;
+text-indent:350px;
+margin-bottom:0em;
+margin-top:2em;
+}
+
+.fancy {
+    margin-left:auto;
+    margin-right:auto;
+
+    max-width: 1000px;
+    background: #D2E9FF;
+    padding: 20px 20px 20px 20px;
+    font: 12px Arial, Helvetica, sans-serif;
+    color: #666;
+}
+.fancy h1 {
+    font: 36px "Trebuchet MS", Arial, Helvetica, sans-serif;
+    padding: 10px 10px 10px 20px;
+    display: block;
+    background: #C0E1FF;
+    border-bottom: 1px solid #B8DDFF;
+    margin: -20px -20px 15px;
+}
+
+
+.fancy label {
+    display: block;
+    margin: 0px 0px 5px;
+	font-size: 18px;
+}
+
+.fancy input[type="text"], .elegant-aero input[type="email"], .elegant-aero textarea, .elegant-aero select {
+    color: #888;
+    width: 70%;
+    padding: 0px 0px 0px 5px;
+    border: 1px solid #C5E2FF;
+    background: #FBFBFB;
+    outline: 0;
+    -webkit-box-shadow:inset 0px 1px 6px #ECF3F5;
+    box-shadow: inset 0px 1px 6px #ECF3F5;
+    font: 200 12px/25px Arial, Helvetica, sans-serif;
+    height: 30px;
+    line-height:15px;
+    margin: 2px 6px 16px 0px;
+}
+.fancy textarea{
+    height:100px;
+    padding: 5px 0px 0px 5px;
+    width: 70%;
+}
+
+
+</style>
+</head>
+
+<body>
+	<header>
+	   <img src="UWPHeader.gif" alt="HTML5 Icon" style="border:solid blue 1px; z-index:1; position:absolute; top:10px; left:145px; width:1027px; height:135px">
+	</header>
+<div id="wrapper">
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a>Products and Services</a>
+					<ul>
+						<li><a href="Rides.html">Rides</a></li>
+						<li><a href="Outlets.html">Outlets</a></li>
+						<li><a href="merchandise.html">Merchandise</a></li>
+					</ul>
+				</li>
+				<li><a href="media.html">Media</a></li>		
+				<li><a href="environment.html">Environment</a></li>
+				<li><a href="contact.html">Contact Us</a></li>
+				<li><a href="about.html">About Us</a></li>
+			</ul>			
+		</nav>
+</div>
+<img src="contactpic.jpg" id="contactpic" alt="contact now">
+
+<div id="bar"></div> 
+<div class="flipper">
+  <div class="back">
+	<div class="Three-Dee">
+	NOW <br> <div style="line-height:2em;">OR</div style="line-height:2em;">NEVER
+	</div>
+	<a href="book.html"><img src="book_now.gif" width="150px" height="50px" style="position:absolute;top:150px;"alt="Book Now"></a></div>
+  <div class="front">
+  <h4>Buy Theme Park Tickets Online</h4>
+  <p>&#10004 Save up to 20%</p>
+  &#10004 Best guarantee
+  <div style="text-align:center;">price</div>
+  <p>&#10004 No booking fee</p>
+  </div>
+</div>
+</div>
+<div class="sub">
+	<div style="margin:3px;">Join Our</div> <div style="text-align:center;">Newsletter</div>
+<p><img src="letter-icon.jpg" width="25px" height="25px" alt="Letter icon" style> <a href="subscribe.html" style="text-decoration:none; color:black;">SUBSCRIBE</a></p>
+</div>
+
+<div id="section" style="top:695px;">
+<form class="fancy" method="post" action="">
+	<h1>Contact Us</h1>
+	<div>
+		<label>First Name
+			<input id="First Name" name="First name" placeholder="First Name Only" type="text">
+		</label>
+		<label>Last name
+			<input id="Last Name" name="Last name" placeholder="Last Name Only" type="text">
+		</label>
+	</div>
+	<br>
+	<div>
+		<label>AGE
+			<input id="AGE" name="AGE" type="number" min="18" max="65"step="1" value="18">
+		</label>
+	</div>
+	<br>
+	<br>
+	<div>
+		<label>Comment/Complaint
+			<textarea id="address" name="address" rows=10 cols=100 required> </textarea>
+		</label>
+	</div>
+	<br>
+	<br>
+	<div>
+		<label> Email
+			<input id="email" name="email" type="email" placeholder="example@domain.com" required>
+		</label>
+	</div>
+	<br>
+	<br>
+	<div >
+     <button type="submit" class="button">Submit</button>
+   </div>
+</form>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Book Now</title>
+	<link rel="stylesheet" type="text/css" href="norm.css">
+<style>
+
+#bookpic {
+width:75%;
+height:60%;
+position:absolute;
+top:250px;
+left:149px;
+z-index:11;
+}
+
+#bar
+{
+    display:block;
+    background-color:rgba(0, 0, 0, 0.8);
+    width:75%;
+    height:5%;
+    position:absolute;
+    bottom:-30px;
+    left:149px;
+	z-index:-1;
+}
+
+h1 {
+font-size:36px;
+color:#2E64FE;
+text-indent:290px;
+margin-bottom:0em;
+margin-top:2em;
+}
+h2{
+font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+text-indent:165px;
+}
+
+.fancy {
+    margin-left:auto;
+    margin-right:auto;
+
+    max-width: 1000px;
+    background: #D2E9FF;
+    padding: 20px 20px 20px 20px;
+    font: 12px Arial, Helvetica, sans-serif;
+    color: #666;
+}
+.fancy h1 {
+    font: 36px "Trebuchet MS", Arial, Helvetica, sans-serif;
+    padding: 10px 10px 10px 20px;
+    display: block;
+    background: #C0E1FF;
+    border-bottom: 1px solid #B8DDFF;
+    margin: -20px -20px 15px;
+}
+
+
+.fancy label {
+    display: block;
+    margin: 0px 0px 5px;
+	font-size: 18px;
+}
+
+.fancy input[type="text"], .elegant-aero input[type="email"], .elegant-aero textarea, .elegant-aero select {
+    color: #888;
+    width: 70%;
+    padding: 0px 0px 0px 5px;
+    border: 1px solid #C5E2FF;
+    background: #FBFBFB;
+    outline: 0;
+    -webkit-box-shadow:inset 0px 1px 6px #ECF3F5;
+    box-shadow: inset 0px 1px 6px #ECF3F5;
+    font: 200 12px/25px Arial, Helvetica, sans-serif;
+    height: 30px;
+    line-height:15px;
+    margin: 2px 6px 16px 0px;
+}
+.fancy textarea{
+    height:100px;
+    padding: 5px 0px 0px 5px;
+    width: 70%;
+}
+</style>
+</head>
+
+<body>
+	<header>
+	   <img src="UWPHeader.gif" alt="HTML5 Icon" style="border:solid blue 1px; z-index:1; position:absolute; top:10px; left:145px; width:1027px; height:135px">
+	</header>
+<div id="wrapper">
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a>Products and Services</a>
+					<ul>
+						<li><a href="Rides.html">Rides</a></li>
+						<li><a href="Outlets.html">Outlets</a></li>
+						<li><a href="merchandise.html">Merchandise</a></li>
+					</ul>
+				</li>
+				<li><a href="media.html">Media</a></li>		
+				<li><a href="environment.html">Environment</a></li>
+				<li><a href="contact.html">Contact Us</a></li>
+				<li><a href="about.html">About Us</a></li>
+			</ul>			
+		</nav>
+</div>
+<img src="bookpic.png" id="bookpic" alt="book now">
+
+<div id="section">
+		<form class="fancy" method="post" action="">
+				<h1>Apply For Tickets </h1>
+				<h2>Fill out the form properly to apply for the ticket options available at the park.</h2> <br> 
+					<div>
+						<label>First Name
+						<input id="First Name" name="First name" placeholder="First Name Only" type="text">
+				</label>
+				<label>Last name
+							<input id="Last Name" name="Last name" placeholder="Last Name Only" type="text">
+						</div>
+				</label>
+				<br>
+				<div>
+					<label>AGE
+						<input id="AGE" name="AGE" type="number" min="18" max="65"step="1" value="18">
+					</label>
+					<br> <br>
+					<label>SEX
+						<input type="radio" name="SEX" value="MALE">MALE
+						<input type="radio" name="SEX" value="FEMALE">FEMALE
+					</label>
+				</div>
+				<br>
+				<div>
+					<label>Address
+					<textarea id="address" name="address" rows=5 cols=100 required> </textarea>
+					</label>
+				</div>
+				<br>
+				<div>
+					<label> Telephone
+						<input id="phone" name="phone" type="tel" placeholder="Eg. +447000 000000" required>
+					</label> <br> <br>
+					<label>Mobile phone Number
+						<input id="phone" name="phone" type="tel" placeholder="Eg. +447000 000000" required>
+					</label>
+				</div>
+				<br>
+				<div>
+					<label> Email 
+						<input id="email" name="email" type="email" placeholder="example@domain.com" required>
+					</label> <br> 
+				</div>
+				<div>
+					<label>Type of Tickets
+						<input type="radio" name="General" value="General">General
+						<input type="radio" name="All Access" value="All Access">ALL Access
+					</label>
+				</div>
+				<br>
+				<div class="card-type">
+					<label>Form of Payment <br>
+						<label for="Cash">Cash</label>
+						<input id="Cash" name="cardtype" type="radio">
+						<label for="Visa">Visa</label>
+						<input id="Visa" name="cardtype" type="radio">
+						<label for="Mastercard">Mastercard</label>
+						<input id="Mastercard" name="cardtype" type="radio">		
+				</div>
+				<br>
+				<br>
+				<div>
+					<button type="submit">Place Order</button>
+				</div>
+		</form>
+</div>
+</body>
+</html>

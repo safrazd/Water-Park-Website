@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title> UWI Water Park - Media </title>
+	<link rel="stylesheet" type="text/css" href="norm.css">
+	<script type="text/javascript">
+
+
+        var nrImg = 7;  //the number of img , 
+        var IntSeconds = 4;     //the seconds between the imgs
+
+        function Load()
+        {
+            nrShown = 0;    //the img visible
+            Vect = new Array(nrImg + 10);
+            Vect[0] = document.getElementById("Img1");
+            Vect[0].style.visibility = "visible";
+
+            document.getElementById("S" + 0).style.visibility = "visible";
+
+            for (var i = 1; i < nrImg; i++)
+            {
+                Vect[i] = document.getElementById("Img" + (i + 1));
+                document.getElementById("S" + i).style.visibility = "visible";
+            }
+
+            document.getElementById("S" + 0).style.backgroundColor = "rgba(255, 255, 255, 0.90)";
+            document.getElementById("SP" + nrShown).style.visibility = "visible";
+
+            mytime = setInterval(Timer, IntSeconds * 1000);
+        }
+        function Timer()
+        {
+            nrShown++;
+            if (nrShown == nrImg)
+                nrShown = 0;
+            Effect();
+        }
+        //next img
+        function next()
+        {
+            nrShown++;
+            if (nrShown == nrImg)
+                nrShown = 0;
+            Effect();
+
+            clearInterval(mytime);
+            mytime = setInterval(Timer, IntSeconds * 1000);
+        }
+        function prev()
+        {
+            nrShown--;
+            if (nrShown == -1)
+                nrShown = nrImg -1;
+            Effect();
+
+            clearInterval(mytime);
+            mytime = setInterval(Timer, IntSeconds * 1000);
+        }
+        //here changes the img + effect
+        function Effect()
+        {
+            for (var i = 0; i < nrImg; i++)
+            {
+                Vect[i].style.opacity = "0";   //to add the fade effect
+                Vect[i].style.visibility = "hidden";
+
+                document.getElementById("S" + i).style.backgroundColor = "rgba(0, 0, 0, 0.70)";
+                document.getElementById("SP" + i).style.visibility = "hidden";
+            }
+            Vect[nrShown].style.opacity = "1";
+            Vect[nrShown].style.visibility = "visible";
+            document.getElementById("S" + nrShown).style.backgroundColor = "rgba(255, 255, 255, 0.90)";
+            document.getElementById("SP" + nrShown).style.visibility = "visible";
+        }
+
+    </script>
+<!--This JavaScript file was obtained from  a YouTube channel, Manase Gecz who shares  his source code  publicly.-->
+	<style>
+
+#heading{
+margin-left:142px;
+width:75%;
+position:absolute;
+top:650px;
+color: #F0F8FF;
+text-align: center;
+}		  
+.events {	
+	 background-color:#20B2AA;
+	 margin-left: 250px;
+	 margin-top:20px;
+	 width:840px;
+	 border:blue solid 1px;
+	}
+#bar{
+    display:block;
+    background-color:rgba(0, 0, 0, 0.8);
+    width:75%;
+    height:5%;
+    position:absolute;
+    bottom:-12px;
+    left:149px;
+	         }
+			
+#partypic {
+width:75%;
+height:60%;
+position:absolute;
+top:250px;
+left:149px;
+z-index:-1;
+}
+
+
+#title{
+margin-top:35px;
+margin-left:450px;
+}
+
+.eventpics{
+position:absolute;
+top:880px;
+left:-14px;
+width:225px;
+ height:225px;
+}
+
+
+#imgs img 
+{
+    width:75%;
+    height:60%;
+    position:absolute;
+    top:1800px;
+    left:165px;
+    transition: 1s;
+    visibility:hidden;
+	
+    
+}
+/*the container */
+#Snav 
+{
+    display:block;
+    width:75%;
+    height:60%;
+    position:absolute;
+    top:1800px;
+    left:165px;
+}
+
+#SnavUp 
+{
+    display:block;
+    width:100%;
+    height:20%;
+}
+#Scircles 
+{
+    display:block;
+    width:5%;
+    height:15%;
+    margin-right:5%;
+    margin-top:2%;
+    float:right;        
+}
+#Scircles ul 
+{
+    margin:0;
+    float:right;
+    display:block;
+    width:100%;
+    height:100%;
+}
+#Scircles li
+{
+    /*we don't need the dots*/
+    list-style:none;
+    display:block;
+    background-color:rgba(0, 0, 0, 1);
+    width:25%;
+    height:90%;
+    margin-left:5%;
+    float:left;     /*on the same line*/
+    visibility:hidden;
+    /*we need circles, not squares*/
+    border-bottom-left-radius:25px;
+    border-top-left-radius:25px;
+    border-bottom-right-radius:25px;
+    border-top-right-radius:25px;
+
+}
+
+#SnavMiddle 
+{
+    display:block;
+    width:100%;
+    height:15%;
+    margin-top:10%;     
+}
+
+#Sleft 
+{
+    width:8%;
+    height:100%;
+    float:left;
+    margin-left:3%;
+    opacity:0.8;
+}
+
+#Sleft:hover 
+{
+    opacity:0.8;
+}
+#Sright 
+{
+    width:8%;
+    height:100%;
+    float:right;
+    margin-right:3%;
+    opacity:0.8;
+}
+#Sright:hover 
+{
+    opacity:0.8;
+}
+
+#SnavBottom 
+{
+    display:block;
+    background-color:rgba(0, 0, 0, 0.8);
+    width:100%;
+    height:10%;
+    position:absolute;
+    bottom:0;
+    left:0;
+}
+#SnavBottom p 
+    {
+    font:normal 200% Arial;
+    color:#fff;
+    position:absolute;
+    bottom:0;
+    left:0;
+    margin-left:3%;
+    visibility:hidden;
+}
+
+#sect{
+top:650px;
+}
+
+</style>	
+
+</head>
+
+<body onload="Load()">
+<header>
+	   <img src="UWPHeader.gif" alt="HTML5 Icon" style="border:solid blue 1px; z-index:1; position:absolute; top:10px; left:145px; width:1027px; height:135px">
+	</header>
+		
+	
+	<div id="wrapper">
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a>Products and Services</a>
+					<ul>
+						<li><a href="Rides.html">Rides</a></li>
+						<li><a href="Outlets.html">Outlets</a></li>
+						<li><a href="merchandise.html">Merchandise</a></li>
+					</ul>
+				</li>
+				<li><a href="media.html">Media</a></li>		
+				<li><a href="environment.html">Environment</a></li>
+				<li><a href="contact.html">Contact Us</a></li>
+				<li><a href="about.html">About Us</a></li>
+			</ul>			
+		</nav>
+	</div>
+	<img src="special events.jpg" id="partypic" alt="HTML5 Icon">	
+	<!-- Structure for Event: birthday Splash -->
+			
+	<div id="bar"></div> 
+<div class="flipper">
+  <div class="back">
+	<div class="Three-Dee">
+	NOW <br> <div style="line-height:2em; margin-left:75px;">OR</div style="line-height:2em;">NEVER
+	</div>
+	<a href="book.html"><img src="book_now.gif" width="150px" height="50px" style="position:absolute;top:150px;"alt="Book Now"></a></div>
+  <div class="front">
+  <h4>Buy Theme Park Tickets Online</h4>
+  <p>&#10004 Save up to 20%</p>
+  &#10004 Best guarantee
+  <div style="text-align:center;">price</div>
+  <p>&#10004 No booking fee</p>
+  </div>
+</div>
+</div>
+<div class="sub">
+	<div style="margin:3px;">Join Our</div> <div style="text-align:center;">Newsletter</div>
+<p><img src="letter-icon.jpg" width="25px" height="25px" alt="Letter icon" style> <a href="subscribe.html" style="text-decoration:none; color:black;">SUBSCRIBE</a></p>
+</div>
+
+<!--pics for each event-->
+			<ul class="eventpics" style="list-style-type:none;">	
+			  <li><img src="birthday-bash.jpg" alt="HTML5 Icon" style="width:225px; height:225px;margin-bottom:6em; margin-top:1em;"></li>
+			  <li><img src="christmas.jpg" alt="HTML5 Icon" style="width:225px; height:225px;margin-bottom:2em;"></li>			  
+			  <li><img src="special events.jpg" alt="HTML5 Icon"  style="width:225px; height:225px"></li>	
+			</ul>
+			
+<!--article begins now-->
+		<h3 id="heading"> <b> <i><h1> Welcome to the MEDIA Page</h1> </i> </b> </br> This page describes all of the events that are hosted by the Water Park and events that you can host. To be part of our events or host
+	        your own events, please go to the contact us page and make your request. As well view our photos taken of you at the Water Park. </h3>
+		
+		<div id="sect">
+		<div class="events">
+			 <h2 style="color:Crimson; text-align:center; margin:0; padding:20;"> Birthday Bash with a Splash </h2> 
+				<p style="color:Bisque; text-align:center; font:18px Papyrus"> Want to have the most exciting and fantastic Brithday ever!!! </br>
+				     Well guess what?! The UWI Water Park accommodates for your Birthday! Just tell us what day, time and your favourite theme.</p>
+				<p style="color:white; font:15px Papyrus"> And yes, we do have our own catering service: Chinese, Indian, Creole, Italian 
+				     and a wide range of desserts inclusive of Birthday Cakes. </p>
+				<p style="color:white; font:15px Papyrus"> <b> <u> Extra Information: </b> </u> For queries about anything that is not listed please contact us.</p> 
+		</div>
+
+	
+	<!-- Structure for Christmas with a Splash event-->
+		<div class="events">
+			<h2 style="color: Crimson; text-align:center; font:23px Old English Text MT; margin:0; padding:20;"> Christmas with a Splash </h2>
+			<p style="color:Bisque; text-align:center; font:20px Papyrus;"> Feeling for a getaway for Christmas? Want to make this Christmas a family oriented one? </br>
+          			Our cabins will be fully decorated to give you that Christmas Feel as well as that warm, homey feeling. </br>
+			<p style="color:White; font:15px Papyrus;"> There will be many activities to help you and family bond. These include: </br>
+			 <p style="color:White; text-align:center; font:15px Papyrus;"> Kids Treat-an evening of activities dedicated to Kids, Mingle-for adults, supervision will be provided for kids 
+                            Dining- complimentary Christmas breakfast and special dinners,  Indoor Skiing- artificial snow will be provided</p>	 
+             <p style="color:White; font:15px Papyrus;"> <b> <u>  Extra Information </b> </u>- For queries about anything that is not listed please contact us </p>
+		</div>
+	
+	<!-- Structure for Other Splashing Events -->
+		<div class="events" style="border: blue solid 1px;">
+			<h2 style="color:Crimson; text-align:center; text-decoration: underline; margin:0; padding:20;"> Other Splashin' Events </h2> 
+			<p style="color:Bisque; text-align:center; font:20px Papyrus;"> <b> These events can be hosted by UWI Water Park or You.</b></br>
+            <p style="color:white; text-align:center; font:18px Papyrus;">Yes, you can contact the water park to book it as a venue to host whatever event you are having: a reception, family gathering, wedding etc. </br>
+                    We will make the transformation for you! </br>
+                    The water park also hosts its own events from time to time, so do look out for any notices.</p>		
+		</div>
+	
+	<!--Structure for photos -->
+		<h2 id="title">Welcome to UWI Water Park's Gallery</title>
+			<div id="slider">
+        <div id="imgs">
+		<!--change images below, put local pics from harris waterpark or funsplash-->
+			<img id="Img7" src="mediaPic13.jpg"/>
+			<img id="Img6" src="mediaPic12.jpg"/>
+			<img id="Img5" src="mediaPic11.jpg"/>
+			<img id="Img4" src="mediaPic10.jpg"/>
+			<img id="Img3" src="mediaPic5.jpg"/>
+            <img id="Img2" src="mediaPic9.jpg"/>
+            <img id="Img1" src="mediaPic8.jpg"/>
+        </div>
+        <!--Here is going to be the left right buttons, the info and the imgs shown-->
+        <div id="Snav">
+            <!-- here is the circles , showes the current img -->
+            <div id="SnavUp">
+                <div id="Scircles">
+                    <ul>
+                        <!-- here you have to add the li tag-->
+                        <li id="S0"></li>
+                        <li id="S1"></li>
+                        <li id="S2"></li>
+						<li id="S3"></li>
+						<li id="S4"></li>
+						<li id="S5"></li>
+						<li id="S6"></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- the left and right button -->
+            <div id="SnavMiddle">
+                <img id="Sleft" src="left.png" onclick="prev()"/>
+                <img id="Sright" src="right.png" onclick="next()"/>
+            </div>
+            <!-- the info -->
+            <div id="SnavBottom">
+                <!-- here you have to add the p tag-->
+                <p id="SP0"></p>
+                <p id="SP1"></p>
+                <p id="SP2"></p>
+				<p id="SP3"></p>
+				<p id="SP4"></p>
+				<p id="SP5"></p>
+				<p id="SP6"></p>
+            </div>
+        </div>
+</div>
+		 
+</body>
+</html>

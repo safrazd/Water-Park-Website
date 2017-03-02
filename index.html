@@ -1,0 +1,346 @@
+    <html>
+<head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="norm.css">
+     <script type="text/javascript">
+
+
+        var nrImg = 3;  //the number of img , I only have 3 
+        var IntSeconds = 4;     //the seconds between the imgs
+
+        function Load()
+        {
+            nrShown = 0;    //the img visible
+            Vect = new Array(nrImg + 10);
+            Vect[0] = document.getElementById("Img1");
+            Vect[0].style.visibility = "visible";
+
+            document.getElementById("S" + 0).style.visibility = "visible";
+
+            for (var i = 1; i < nrImg; i++)
+            {
+                Vect[i] = document.getElementById("Img" + (i + 1));
+                document.getElementById("S" + i).style.visibility = "visible";
+            }
+
+            document.getElementById("S" + 0).style.backgroundColor = "rgba(255, 255, 255, 0.90)";
+            document.getElementById("SP" + nrShown).style.visibility = "visible";
+
+            mytime = setInterval(Timer, IntSeconds * 1000);
+        }
+        function Timer()
+        {
+            nrShown++;
+            if (nrShown == nrImg)
+                nrShown = 0;
+            Effect();
+        }
+        //next img
+        function next()
+        {
+            nrShown++;
+            if (nrShown == nrImg)
+                nrShown = 0;
+            Effect();
+
+            clearInterval(mytime);
+            mytime = setInterval(Timer, IntSeconds * 1000);
+        }
+        function prev()
+        {
+            nrShown--;
+            if (nrShown == -1)
+                nrShown = nrImg -1;
+            Effect();
+
+            clearInterval(mytime);
+            mytime = setInterval(Timer, IntSeconds * 1000);
+        }
+        //here changes the img + effect
+        function Effect()
+        {
+            for (var i = 0; i < nrImg; i++)
+            {
+                Vect[i].style.opacity = "0";   //to add the fade effect
+                Vect[i].style.visibility = "hidden";
+
+                document.getElementById("S" + i).style.backgroundColor = "rgba(0, 0, 0, 0.70)";
+                document.getElementById("SP" + i).style.visibility = "hidden";
+            }
+            Vect[nrShown].style.opacity = "1";
+            Vect[nrShown].style.visibility = "visible";
+            document.getElementById("S" + nrShown).style.backgroundColor = "rgba(255, 255, 255, 0.90)";
+            document.getElementById("SP" + nrShown).style.visibility = "visible";
+        }
+
+    </script>
+<!--This JavaScript file was obtained from  a YouTube channel, Manase Gecz who shares  his source code  publicly.-->
+<style>
+body
+{
+    background-image:url("water_pee.jpg");
+    background-repeat:no-repeat;
+    background-size: 100%;
+ }
+ 
+#imgs img 
+{
+
+    width:75%;
+    height:60%;
+    position:absolute;
+    top:250px;
+    left:100px;
+    transition: 1s;
+    visibility:hidden;
+    z-index:-1;
+    
+    
+}
+
+#Snav 
+{
+    display:block;
+    width:75%;
+    height:60%;
+    position:absolute;
+    top:250px;
+    left:100px;
+}
+
+#SnavUp 
+{
+    display:block;
+    width:100%;
+    height:20%;
+}
+#Scircles 
+{
+    display:block;
+    width:5%;
+    height:15%;
+    margin-right:5%;
+    margin-top:2%;
+    float:right;        
+}
+#Scircles ul 
+{
+    margin:0;
+    float:right;
+    display:block;
+    width:100%;
+    height:100%;
+}
+#Scircles li
+{
+    /*we don't need the dots*/
+    list-style:none;
+    display:block;
+    background-color:rgba(0, 0, 0, 1);
+    width:25%;
+    height:90%;
+    margin-left:5%;
+    float:left;     /*on the same line*/
+    visibility:hidden;
+    /*we need circles, not squares*/
+    border-bottom-left-radius:25px;
+    border-top-left-radius:25px;
+    border-bottom-right-radius:25px;
+    border-top-right-radius:25px;
+
+}
+
+#SnavMiddle 
+{
+    display:block;
+    width:100%;
+    height:15%;
+    margin-top:10%;    
+}
+
+#Sleft 
+{
+    width:8%;
+    height:100%;
+    float:left;
+    margin-left:3%;
+    opacity:0.8;
+}
+
+#Sleft:hover 
+{
+    opacity:0.8;
+}
+#Sright 
+{
+    width:8%;
+    height:100%;
+    float:right;
+    margin-right:3%;
+    opacity:0.8;
+}
+#Sright:hover 
+{
+    opacity:0.8;
+}
+
+#SnavBottom 
+{
+    display:block;
+    background-color:rgba(0, 0, 0, 0.8);
+    width:100%;
+    height:10%;
+    position:absolute;
+    bottom:0;
+    left:0;
+}
+#SnavBottom p 
+    {
+    font:normal 200% Arial;
+    color:#fff;
+    position:absolute;
+    bottom:0;
+    left:0;
+    margin-left:3%;
+    visibility:hidden;
+}
+.div-wrapper {
+    position: relative;
+    height: 400px;
+    width: 500px;
+}
+
+#footer {
+    position: absolute;
+    bottom: -600px;
+    left: 50px;
+    width: 100%;
+    text-align: center;
+}
+
+#footer table,th,td{
+
+}
+
+#footer th{
+    font-family: "Lucida Calligraphy", Lucida, serif;
+    font-size:150%;
+    font-weight: bold;
+}
+
+</style>
+</head>
+
+<body onload="Load()">
+
+    <header>
+        <header>
+	   <img src="UWPHeader.gif" alt="HTML5 Icon" style="border:solid blue 1px; z-index:1; position:absolute; top:10px; left:145px; width:1027px; height:135px">
+	</header>
+    </header>
+<div id="wrapper">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a>Products and Services</a>
+                    <ul>
+                        <li><a href="Rides.html">Rides</a></li>
+                        <li><a href="Outlets.html">Outlets</a></li>
+                        <li><a href="merchandise.html">Merchandise</a></li>
+                    </ul>
+                </li>
+                <li><a href="media.html">Media</a> </li>       
+                <li><a href="environment.html">Environment</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>           
+        </nav>
+</div>
+<div id="slider">
+        <div id="imgs">
+        
+            <img id="Img3" src="4.jpg"/>
+            <img id="Img2" src="5.jpg"/>
+            <img id="Img1" src="6.jpg"/>
+        </div>
+        <!--Here is going to be the left right buttons, the info and the imgs shown-->
+        <div id="Snav">
+            <!-- here is the circles , showes the current img -->
+            <div id="SnavUp">
+                <div id="Scircles">
+                    <ul>
+                        <!-- here you have to add the li tag-->
+                        <li id="S0"></li>
+                        <li id="S1"></li>
+                        <li id="S2"></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- the left and right button -->
+            <div id="SnavMiddle">
+                <img id="Sleft" src="left.png" onclick="prev()"/>
+                <img id="Sright" src="right.png" onclick="next()"/>
+            </div>
+            <!-- the info -->
+            <div id="SnavBottom">
+                <!-- here you have to add the p tag-->
+                <p id="SP0"></p>
+                <p id="SP1"></p>
+                <p id="SP2"></p>
+            </div>
+        </div>
+</div>
+<div class="flipper">
+  <div class="back">
+    <div class="Three-Dee">
+    NOW <br> <div style="line-height:2em;">OR</div style="line-height:2em;">NEVER
+    </div>
+    <a href="book.html"><img src="book_now.gif" width="150px" height="50px" style="position:absolute;top:150px;"alt="Book Now"></a></div>
+  <div class="front">
+  <h4>Buy Theme Park Tickets Online</h4>
+  <p>&#10004 Save up to 20%</p>
+  &#10004 Best guarantee
+  <div style="text-align:center;">price</div>
+  <p>&#10004 No booking fee</p>
+  </div>
+</div>
+</div>
+
+ <div id="footer">
+            <div class="div_wrapper">
+            <table style="width 80%" align="center">
+                 <tr>
+                    <th><p style="color:darkblue"> Welcome to UWI's Water Park</p></th>
+                 </tr>
+                 <tr>
+                 <td align="center" width="100%">
+                    <img src="midwater2.jpg" align="center" alt="links" usemap="#sitelinks">
+                    <map name="sitelinks">
+                    <area shape="rect" coords="170,173,304,302" href="">
+                    <area shape="rect" coords="" href="">
+                    <area shape="rect" coords="" href="">
+                    <area shape="rect" coords="" href="">
+                    <area shape="circle" coords="" href="">
+                    </map>
+                    </td>
+                </tr>
+                <tr>
+                 <td align="center">
+                    <img src="reg.jpg" align="center" alt="Links" usemap="#waterlinks">
+                    <map name="waterlinks">
+                    <area shape="rect" coords="119,22,214,123" href="">
+                    </map>
+                </td>
+                </tr>
+                 <td>
+                 <br/>
+                 <br/>
+                 <br/>
+            <a href="www.Facebook.com" target="_blank">Visit our Facebook Page</a>
+            <br>
+            <a href="" target="_blank">Register For Our Online Services</a>
+                 </td>
+                 </tr>
+            </div>
+</div>

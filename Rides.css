@@ -1,0 +1,44 @@
+#left {
+		float:left;
+		clear:left;
+	 }
+				
+#right {
+		 float:right;
+		 clear:right;
+	   }
+	   
+table{
+     background-color:#00CCFF;
+	 position:absolute;
+	 z-index:0;
+     border: 1px solid blue;
+	 border-radius:20px;
+     }	   
+
+.thumbnail img {
+				position:relative;
+				border-radius:10px;
+			  }			  
+
+.thumbnail span { 
+				position:absolute;
+				left: -10000px;
+				border: 1px dashed black;
+				overflow: scroll;
+				border-radius:20px;
+			   }
+			   
+											
+input[type=checkbox] {
+					 opacity:0;
+					 position:absolute;
+					}
+ 
+input[type=checkbox]:checked ~ .SpanToggle {
+											   position:absolute;
+											   visibility:visible;
+											   left: 200px;
+											   z-index: 50; 
+											   color: blue;
+											}

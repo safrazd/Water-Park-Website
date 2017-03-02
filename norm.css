@@ -1,0 +1,182 @@
+html {
+	background:url(water.jpg) no-repeat center center fixed;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+}
+
+#wrapper {
+	margin-left:60px;
+	padding: 2%;
+	border-radius: 2px;
+	
+}
+
+header {
+	width: 96%;
+	min-height: 125px;
+	padding: 5px;
+	margin-bottom: -40px;
+	text-align: center;
+}
+
+nav ul {
+	list-style: none;
+	margin-left: 0;
+	padding-left: 50px;
+	position:absolute;
+	z-index:99;
+}
+nav ul li {
+	float: left;
+	border-radius: 1px;
+	border: 2px solid #322F2C;
+	box-shadow: 0 0 15px rgba(50, 50, 50, 1);
+	
+}
+nav ul li a {
+	background: blue;
+	display: block;
+	padding: 10px 40px;
+	font-weight: bold;
+	font-size: 18px;
+	color: white;
+	text-decoration: none;
+}
+nav ul li a:hover{
+	background-color: #322F2C;
+	color: #fff;
+
+}
+
+nav ul li ul {
+padding:0;
+position:absolute;
+top:100%;
+display:none;
+-webkit-transition: all 0.2s ease;
+-moz-transition: all 0.2s ease;
+-o-transition: all 0.2s ease;
+-ms-transition: all 0.2s ease;
+transition: all 0.2s ease; }
+
+nav ul li:hover > ul { display:block;}
+
+ nav ul li ul li {
+ background:none;
+ width:50%;
+ }
+ 
+ nav ul li ul li a {
+  float:none;
+ }
+
+ nav ul li ul li:hover >a {
+	background: #FFFF66;
+	color:black;
+	visibility:visible;
+}
+.flipper{ width:150px; height:200px; margin:10px; margin-top:125px;float:right; }
+.flipper > .front{
+	position:absolute;
+	-webkit-transform: perspective( 600px ) rotateY( 0deg );
+	transform: perspective( 600px ) rotateY( 0deg );
+	background:#0099FF; width:150px; height:200px; border-radius: 7px;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	transition: -webkit-transform .5s linear 0s;
+	transition: transform .5s linear 0s;
+	border: 2px solid yellow;
+	box-shadow: 0 0 15px rgba(50, 50, 50, 1);
+	font-family: 'Comic Sans MS', cursive;
+	line-height: 1em;
+}
+.flipper > .back{
+	position:absolute;
+	-webkit-transform: perspective( 600px ) rotateY( 180deg );
+	transform: perspective( 600px ) rotateY( 180deg );
+	background: #33CCFF; width:150px; height:200px; border-radius: 7px;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	transition: -webkit-transform .5s linear 0s;
+	transition: transform .5s linear 0s;
+	border: 2px solid yellow;
+	box-shadow: 0 0 15px rgba(50, 50, 50, 1);
+}
+.Three-Dee{
+font-family: 'Comic Sans MS', cursive;
+line-height: 1em;
+color: #ffff0a;
+font-weight:bold;
+font-size: 33px;
+text-shadow:0px 0px 0 rgb(209,209,-36),1px 1px 0 rgb(173,173,-72),2px 2px 0 rgb(137,137,-108), 3px 3px 0 rgb(101,101,-144),4px 4px 3px rgba(0,0,0,0.6),4px 4px 1px rgba(0,0,0,0.5),0px 0px 3px rgba(0,0,0,.2);}
+
+
+.flipper:hover > .front{
+	-webkit-transform: perspective( 600px ) rotateY( -180deg );
+	transform: perspective( 600px ) rotateY( -180deg );
+}
+.flipper:hover > .back{
+	-webkit-transform: perspective( 600px ) rotateY( 0deg );
+	transform: perspective( 600px ) rotateY( 0deg );
+}
+
+.sub{
+	width:150px; 
+	height:150px; 
+	margin-top:550px;
+	margin-left:1175px;
+	border-radius: 20px;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	transition: -webkit-transform .5s linear 0s;
+	transition: transform .5s linear 0s;
+	box-shadow: 0 0 15px rgba(50, 50, 50, 1);
+	background: #ebf1f6; 
+	background: -moz-linear-gradient(top, #ebf1f6 0%, #abd3ee 50%, #89c3eb 51%, #d5ebfb 100%); 
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ebf1f6), color-stop(50%,#abd3ee), color-stop(51%,#89c3eb), color-stop(100%,#d5ebfb)); 
+	background: -webkit-linear-gradient(top, #ebf1f6 0%,#abd3ee 50%,#89c3eb 51%,#d5ebfb 100%); 
+	background: -o-linear-gradient(top, #ebf1f6 0%,#abd3ee 50%,#89c3eb 51%,#d5ebfb 100%); 
+	background: -ms-linear-gradient(top, #ebf1f6 0%,#abd3ee 50%,#89c3eb 51%,#d5ebfb 100%); 
+	background: linear-gradient(to bottom, #ebf1f6 0%,#abd3ee 50%,#89c3eb 51%,#d5ebfb 100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebf1f6', endColorstr='#d5ebfb',GradientType=0 ); 
+	font-family: 'Comic Sans MS', cursive;
+	line-height: 2em;
+	font-size:20px;}
+	
+#section{
+
+width: 75%;
+position:absolute;
+top:650px;
+margin-left:142px;
+font-family:Arial;
+background-color:lightblue;
+}
+
+@media screen and (max-width: 740px) {
+
+header {
+	margin-bottom: -60px;
+}
+nav {
+	width: 99%;
+	margin-bottom: 10px;
+}
+nav ul {
+	list-style: none;
+	margin: 0 auto;
+	padding-left: 0;
+	
+}
+nav li {
+	text-align: center;
+	margin-left: 0 auto;
+	width: 100%;
+}
+nav ul li a {
+	padding: 8px 0;
+	font-size: 16px;
+}
+}

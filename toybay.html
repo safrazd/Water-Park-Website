@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Toy Bay</title>
+	<link rel="stylesheet" type="text/css" href="norm.css">
+<script type="text/javascript">
+
+var slideimages=new Array()
+var slidelinks=new Array()
+function slideshowimages(){
+for (i=0;i<slideshowimages.arguments.length;i++){
+slideimages[i]=new Image()
+slideimages[i].src=slideshowimages.arguments[i]
+}
+}
+
+function slideshowlinks(){
+for (i=0;i<slideshowlinks.arguments.length;i++)
+slidelinks[i]=slideshowlinks.arguments[i]
+}
+
+function gotoshow(){
+if (!window.winslide||winslide.closed)
+winslide=window.open(slidelinks[whichlink])
+else
+winslide.location=slidelinks[whichlink]
+winslide.focus()
+}
+</script>
+<!--The JavaScript file above was obtained at JavaScript Kit (www.javascriptkit.com).
+The usage terms are:one may freely use any scripts found in their library on personal
+and commercial websites.-->
+<style>
+	
+#storepic {
+width:75%;
+height:60%;
+position:absolute;
+top:250px;
+left:149px;
+z-index:-1;
+}
+
+#bar
+{
+    display:block;
+    background-color:rgba(0, 0, 0, 0.8);
+    width:75%;
+    height:5%;
+    position:absolute;
+    bottom:-28px;
+    left:149px;
+}
+#slide{
+border:5px solid pink;
+position:absolute;
+left:1020px;
+top:100px;
+border-radius:5px;
+}
+.detail{
+position:absolute;
+top:100px;
+left:300px;
+width:500px;
+}
+.detail1{
+margin-top:-180px;
+margin-left:300px;
+width:500px;
+}
+.detail2{
+margin-top:-150px;
+margin-left:300px;
+width:500px;
+}
+
+.rating {
+    overflow: hidden;
+    display: inline-block;
+    font-size: 0;
+    position: relative;
+}
+.rating-input {
+    float: right;
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    margin: 0 0 0 -16px;
+    opacity: 0;
+	
+}
+.rating:hover .rating-star:hover,
+.rating:hover .rating-star:hover ~ .rating-star,
+.rating-input:checked ~ .rating-star {
+    background-position: 0 0;
+	
+}
+
+.rating:hover .rating-star {
+    position: relative;
+    float: right;
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url('star.png') 0 -16px;
+}
+
+.quantity{
+position:absolute;
+top:64px;
+left:360px;
+}
+.quantity1{
+position:absolute;
+top:424px;
+left:670px;
+}
+.quantity2{
+position:absolute;
+top:684px;
+left:670px;
+}
+.cart input[type="button"] {
+  display: block;
+  background: #FF00FF;
+  border: none;
+  -moz-border-radius: 2px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size:15px;
+  font-family: 'Comic Sans MS', cursive;
+  color:blue;
+  position:absolute;
+  left:360px;
+  font-size:large;
+}
+#speed{
+position:relative;
+top:60px;}
+
+#ball{
+position:relative;
+top:90px;}
+
+h2{
+font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+margin-left:20px;
+}
+
+h3{
+margin-bottom:0.3em;}
+
+.title{
+font: 24px "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+</style>
+
+</head>
+
+<body>
+
+	<header>
+	   <img src="UWPHeader.gif" alt="HTML5 Icon" style="border:solid blue 1px; z-index:1; position:absolute; top:10px; left:145px; width:1027px; height:135px">
+	</header>
+<div id="wrapper">
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a>Products and Services</a>
+					<ul>
+						<li><a href="Rides.html">Rides</a></li>
+						<li><a href="Outlets.html">Outlets</a></li>
+						<li><a href="merchandise.html">Merchandise</a></li>
+					</ul>
+				</li>
+				<li><a href="media.html">Media</a></li>			
+				<li><a href="environment.html">Environment</a></li>
+				<li><a href="contact.html">Contact Us</a></li>
+				<li><a href="about.html">About Us</a></li>
+			</ul>			
+		</nav>
+</div>
+<img src="shop3.png" id="storepic" alt="store picture">
+
+<div id="bar"></div> 
+
+<div id="section">
+<a href="javascript:gotoshow()"><img src="" id="slide" name="slide"  width=150 height=400></a>
+<script>
+slideshowimages("sidebar5.jpg","sidebar6.jpg")
+var slideshowspeed=3000
+
+var whichlink=0
+var whichimage=0
+function slideit(){
+if (!document.images)
+return
+document.images.slide.src=slideimages[whichimage].src
+whichlink=whichimage
+if (whichimage<slideimages.length-1)
+whichimage++
+else
+whichimage=0
+setTimeout("slideit()",slideshowspeed)
+}
+slideit()
+</script>
+<!--The JavaScript file above was obtained at JavaScript Kit (www.javascriptkit.com).
+The usage terms are:one may freely use any scripts found in their library on personal
+and commercial websites.-->
+
+	<h1>Toy Bay</h1>
+	<h2>Featured Products</h2>
+
+<div>
+	<img src="gun.jpg" alt="Squirt Gun" width="164" height="201" style="margin-left:90px;border-radius:4px;">
+	<div class="detail">
+		<form method="post" action="#">
+		<p class="title">Kids Water Shooter Squirt Gun</p>
+		 
+		<span class="rating">
+		<input type="radio" class="rating-input"
+			id="rating-input-1-5" name="rating-input-1">
+		<label for="rating-input-1-5" class="rating-star"></label>
+		<input type="radio" class="rating-input"
+			id="rating-input-1-4" name="rating-input-1" >
+		<label for="rating-input-1-4" class="rating-star"></label>
+		<input type="radio" class="rating-input"
+			id="rating-input-1-3" name="rating-input-1">
+		<label for="rating-input-1-3" class="rating-star"></label>
+		<input  type="radio" class="rating-input"
+			id="rating-input-1-2" name="rating-input-1">
+		<label for="rating-input-1-2" class="rating-star"></label>
+		<input type="radio" class="rating-input"
+			id="rating-input-1-1" name="rating-input-1">
+		<label for="rating-input-1-1" class="rating-star"></label>
+		</span> <br>
+		<small>$40</small>
+		
+		<div class="quantity">
+		<label><small>Qyt: </small>
+			<select name="quantity">
+				<option selected>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+				<option>6</option>
+				<option>7</option>
+				<option>8</option>
+				<option>9</option>
+				<option>10</option>
+			</select>
+		</label>
+		</div>	
+		<p>Product Details</p>
+			Cool Off With Classic Style For instant fun at your summer bash, 
+			just pass out these classic clear Squirt Gun. Pool parties just don't get any better!
+		
+		<div class="cart">
+			<input type="button" value="Add to Cart">
+		</div>
+		</form>
+	</div>
+</div>
+
+	<img id="speed"src="speed.jpg" alt="speed boat" width="164" height="201" style="margin-left:90px;border-radius:4px;">
+	<div class="detail1">
+		<form method="post" action="#">
+		<p class="title">Kids Radio Control Speed Boat</p>
+		 
+		<span class="rating">
+		<input type="radio" class="rating-input"
+			id="rating-input-1-5" name="rating-input-1">
+		<label for="rating-input-1-5" class="rating-star"></label>
+		<input type="radio" class="rating-input"
+			id="rating-input-1-4" name="rating-input-1" >
+		<label for="rating-input-1-4" class="rating-star"></label>
+		<input type="radio" class="rating-input"
+			id="rating-input-1-3" name="rating-input-1">
+		<label for="rating-input-1-3" class="rating-star"></label>
+		<input  type="radio" class="rating-input"
+			id="rating-input-1-2" name="rating-input-1">
+		<label for="rating-input-1-2" class="rating-star"></label>
+		<input type="radio" class="rating-input"
+			id="rating-input-1-1" name="rating-input-1">
+		<label for="rating-input-1-1" class="rating-star"></label>
+		</span> <br>
+		<small>$300</small>
+		
+		<div class="quantity1">
+		<label><small>Qyt: </small>
+			<select name="quantity1">
+				<option selected>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+				<option>6</option>
+				<option>7</option>
+				<option>8</option>
+				<option>9</option>
+				<option>10</option>
+			</select>
+		</label>
+		</div>	
+		<p>Product Details</p>
+		This boat is a great toy, for either you child, or for your 8 year old husband.
+		The boat can reach a high speed of 3.6Km/h and is great for indoor and outdoor pools. 
+		<div class="cart" style="position:absolute;left:320px;">
+			<input type="button" value="Add to Cart">
+		</div>
+		</form>
+	</div>
+	<img id="ball"src="ball.jpg" alt="Beach Ball" width="164" height="201" style="margin-left:90px;border-radius:4px;">
+	<div class="detail2">
+		<form method="post" action="#">
+		<p class="title">Inflatable Beach Ball</p>
+		 
+		<span class="rating">
+		<input type="radio" class="rating-input"
+			id="rating-input-1-5" name="rating-input-1">
+		<label for="rating-input-1-5" class="rating-star"></label>
+		<input type="radio" class="rating-input"
+			id="rating-input-1-4" name="rating-input-1" >
+		<label for="rating-input-1-4" class="rating-star"></label>
+		<input type="radio" class="rating-input"
+			id="rating-input-1-3" name="rating-input-1">
+		<label for="rating-input-1-3" class="rating-star"></label>
+		<input  type="radio" class="rating-input"
+			id="rating-input-1-2" name="rating-input-1">
+		<label for="rating-input-1-2" class="rating-star"></label>
+		<input type="radio" class="rating-input"
+			id="rating-input-1-1" name="rating-input-1">
+		<label for="rating-input-1-1" class="rating-star"></label>
+		</span> <br>
+		<small>$15</small>
+		<div class="quantity2">
+		<label><small>Qyt: </small>
+			<select name="quantity2">
+				<option selected>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+				<option>6</option>
+				<option>7</option>
+				<option>8</option>
+				<option>9</option>
+				<option>10</option>
+			</select>
+		</label>
+		</div>	
+		<p>Product Details</p>
+		With a bright and classic design, these beach balls will add some flair to your next poolside celebration. 
+		<div class="cart" style="position:absolute;left:320px;">
+			<input type="button" value="Add to Cart">
+		</div>
+		</form>
+	</div>
+	<br>
+	<br>
+	<br>
+	
+</div>
+</body>
+</html>
