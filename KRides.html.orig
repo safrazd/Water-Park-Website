@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<<<<<<< HEAD
+<!-- Test again againq1 jhjggftrdr-->
+=======
+<!-- Test again againq1-->
+	<!-- Test again againq2-->
+>>>>>>> 26e13097f98426483571fd3409a53607647daedd
+	<meta charset="UTF-8">
+	<title> Kiddy Rides </title>
+	<link rel="stylesheet" type="text/css" href="norm.css">
+	<link rel="stylesheet" type="text/css" href="Rides.css">
+	<script>
+		function ChangeRide(obj) 
+		{ var crs = document.getElementsByClassName("cr");
+			for (var i = 0; i < crs.length; i++)
+				{
+				  crs[i].checked = false;
+				}
+		  obj.checked = true;
+		}
+	</script>
+</head>
+
+<body>
+	<header>
+	   <img src="UWPHeader.gif" alt="HTML5 Icon" style="border:solid blue 1px; z-index:1; position:absolute; top:10px; left:145px; width:1027px; height:135px">
+	</header>
+	
+	<div id="wrapper">
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a>Products and Services</a>
+					<ul>
+						<li><a href="Rides.html">Rides</a></li>
+						<li><a href="Outlets.html">Outlets</a></li>
+						<li><a href="Merchandise.html">Merchandise</a></li>
+					</ul>
+				</li>
+				<li><a href="media.html">Media</a></li>		
+				<li><a href="environment.html">Environment</a></li>
+				<li><a href="contact.html">Contact </a></li>
+				<li><a href="about.html">About Us</a></li>
+			</ul>			
+		</nav>
+	</div>
+	
+	<div>
+		<img id="right" src="UWPRidesLogo.gif" style="position:absolute; top:210px; left:400px; width:600px; height:540px;">
+	</div>
+	
+	<!--PIRATES COVE-->
+	<div style="position:relative; top:60px; left:60px;" id="left">
+		<div class="thumbnail">
+			<input class="cr" type="checkbox" id="opt1" onchange="ChangeRide(this)">
+			<label for="opt1" > <img src="PCIcon.png" width="100px" height="100px" style="left:80px; border:solid blue 1px;"> </label>
+			<span style="background-color:BurlyWood ;" class="SpanToggle" style="position:relative;">
+				<div id="left">
+					<audio id="PCplayer" src="PCTheme.ogg" loop></audio>
+					<img src="ThemeMusicMascot.gif" style="position:absolute; width:15px; height:30px; top:2px; left:490px;">
+					<img src="ThemeMusicLogo.gif" style="position:absolute; width:200px; height:33px; top:5px; left:510px;">
+					<img src="ThemeMusicMascot.gif" style="position:absolute; width:15px; height:30px; top:2px; left:785px;">
+					<button onclick="document.getElementById('PCplayer').play();PCplayer.volume=0.3;" style="position:relative; top:10px; left:715px;"> <img src="ThemePlay.png" width="15px" height="15px" > </button>
+					<button onclick="document.getElementById('PCplayer').pause()" style="position:relative; top:10px; left:710px;"> <img src="ThemePause.png" width="15px" height="15px" > </button> <br/>
+					<img src="PC.gif" style="position:relative; right:30px; width:550px; height:90px;">
+					<img src="WaterArrow.gif" style="position:relative; top:25px; left:70px; width:200px; height:105px;">
+					<p style="color:DarkOliveGreen; font:20px Baskerville Old Face"> 
+						This is a nautical themed kid friendly ride that can also be enjoyed by adults.<br/>
+						It features many interconnected slides structured, with multiple play areas<br/>
+						and a "splash area" for younger children to play along with their family.
+					</p>
+					<img src="PCRide.jpg" style="width:820px; height:380px; border:solid blue 1px;">
+				</div>
+				
+				<div id="right" style="position:absolute; left:830px; background-color:Black; height:623px; border:solid Gold 2px; border-radius:20px;">
+					<img src="PCmsg.gif" style="width:810px; height:380px;"> <br/>
+					<img src="BuyTickets.gif" style="border:solid red 1px; position:relative; left:70px;">
+					<a href="merchandise.html" target="_blank"><img  src="BuyMerchandise.gif" style="border:solid purple 1px; position:relative; left:150px; top:10px;"></a>
+				</div>
+			</span>			
+		</div>
+	</div>
+	<!--ALIEN INVASION-->
+	<div style="position:relative; top:60px; left:60px;" id="left">
+		<div class="thumbnail">
+			<input class="cr" type="checkbox" id="opt2" onchange="ChangeRide(this)">
+			<label for="opt2"> <img src="AiIcon.png" width="100px" height="100px" style="left:80px; border:solid blue 1px;"> </label>
+			<span style="background-color:LightGreen;" class="SpanToggle">
+				<div id="left">
+					<audio id="AIplayer" src="AITheme.ogg" loop></audio>
+					<img src="ThemeMusicMascot.gif" style="position:absolute; width:15px; height:30px; top:2px; left:490px;">
+					<img src="ThemeMusicLogo.gif" style="position:absolute; width:200px; height:33px; top:5px; left:510px;">
+					<img src="ThemeMusicMascot.gif" style="position:absolute; width:15px; height:30px; top:2px; left:785px;">
+					<button onclick="document.getElementById('AIplayer').play();AIplayer.volume=0.5;" style="position:relative; top:10px; left:715px;"> <img src="ThemePlay.png" width="15px" height="15px" > </button>
+					<button onclick="document.getElementById('AIplayer').pause()" style="position:relative; top:10px; left:710px;"> <img src="ThemePause.png" width="15px" height="15px" > </button> <br/>
+					<img src="AI.gif" style="position:relative; right:10px; width:550px; height:90px;">
+					<img src="WaterArrow.gif" style="position:relative; top:25px; left:70px; width:200px; height:105px;">
+					<p style="color:Green; font:23px Chiller"> 
+						This ride has mass approval among adults and children. More intense than all the other<br/>
+						"kiddy rides", it features a large water tunnel slide that emits a light show.<br/>
+						This together with the space ship mechanism that slowly spins the lower pool area<br/>
+						results in a very exciting ride.
+					</p>
+					<img src="AIRide.jpg" style="width:820px; height:380px; border:solid blue 1px;">
+				</div>
+				
+				<div id="right" style="position:absolute; left:830px; background-color:Black; height:668px; border:solid Gold 2px; border-radius:20px;">
+					<img src="AImsg.gif" style="width:810px; height:380px;"> <br/>
+					<img src="BuyTickets.gif" style="border:solid red 1px; position:relative; left:70px;">
+					<a href="merchandise.html" target="_blank"><img  src="BuyMerchandise.gif" style="border:solid purple 1px; position:relative; left:150px; top:10px;"></a>
+				</div>
+			</span>		
+		</div>
+	</div>
+	<!--GOLD RUSH-->
+	<div style="position:relative; top:60px; left:60px;" id="left">
+		<div class="thumbnail">
+			<input class="cr" type="checkbox" id="opt3" onchange="ChangeRide(this)">
+			<label for="opt3"> <img src="GRIcon.png" width="100px" height="100px" style="left:80px; border:solid blue 1px;"> </label>
+			<span style="background-color:DarkGrey;" class="SpanToggle">
+				<div id="left">
+					<audio id="GRplayer" src="GRTheme.ogg" loop></audio>
+					<img src="ThemeMusicMascot.gif" style="position:absolute; width:15px; height:30px; top:2px; left:490px;">
+					<img src="ThemeMusicLogo.gif" style="position:absolute; width:200px; height:33px; top:5px; left:510px;">
+					<img src="ThemeMusicMascot.gif" style="position:absolute; width:15px; height:30px; top:2px; left:785px;">
+					<button onclick="document.getElementById('GRplayer').play()" style="position:relative; top:10px; left:715px;"> <img src="ThemePlay.png" width="15px" height="15px" > </button>
+					<button onclick="document.getElementById('GRplayer').pause()" style="position:relative; top:10px; left:710px;"> <img src="ThemePause.png" width="15px" height="15px" > </button> <br/>
+					<img src="GR.gif" style="position:relative; width:550px; height:90px;">
+					<img src="WaterArrow.gif" style="position:relative; top:25px; left:70px; width:200px; height:105px;">
+					<p style="color:Gold; font:17px Broadway"> 
+						<br/>
+						It is a mineshaft themed ride that features many interconnected<br/>
+						slides, play areas and supervisors (working miners). It is indoors,<br/>
+						large and expansive so kids are sure to have fun exploring.<br>
+						Also who doesn't want free gold!.
+					</p>
+					<img src="GrRide.jpg" style="width:820px; height:380px; border:solid blue 1px;">
+				</div>
+				
+				<div id="right" style="position:absolute; left:830px; background-color:Black; height:648px; border:solid Gold 2px; border-radius:20px;">
+					<img src="GRmsg.gif" style="width:810px; height:380px;"> <br/>
+					<img src="BuyTickets.gif" style="border:solid red 1px; position:relative; left:70px;">
+					<a href="merchandise.html" target="_blank"><img  src="BuyMerchandise.gif" style="border:solid purple 1px; position:relative; left:150px; top:10px;"></a>
+				</div>
+			</span>		
+		</div>
+	</div>
+	<!--MR.FROSTY-->
+	<div style="position:relative; top:60px; left:60px;" id="left">
+		<div class="thumbnail">
+			<input class="cr" type="checkbox" id="opt4" onchange="ChangeRide(this)">
+			<label for="opt4"> <img src="MFIcon.png" width="100px" height="100px" style="left:80px; border:solid blue 1px;"> </label>
+			<span style="background-color:DodgerBlue  ;" class="SpanToggle">
+				<div id="left">
+					<audio id="MFplayer" src="MFTheme.ogg" loop></audio>
+					<img src="ThemeMusicMascot.gif" style="position:absolute; width:15px; height:30px; top:2px; left:490px;">
+					<img src="ThemeMusicLogo.gif" style="position:absolute; width:200px; height:33px; top:5px; left:510px;">
+					<img src="ThemeMusicMascot.gif" style="position:absolute; width:15px; height:30px; top:2px; left:785px;">
+					<button onclick="document.getElementById('MFplayer').play()" style="position:relative; top:10px; left:715px;"> <img src="ThemePlay.png" width="15px" height="15px" > </button>
+					<button onclick="document.getElementById('MFplayer').pause()" style="position:relative; top:10px; left:710px;"> <img src="ThemePause.png" width="15px" height="15px" > </button> <br/>
+					<img src="MF.gif" style="position:relative; right:10px; width:550px; height:90px;">
+					<img src="WaterArrow.gif" style="position:relative; top:25px; left:70px; width:200px; height:105px;">
+					<p style="color:cyan ; font:12px Goudy Stout"> 
+						A winter wonderland themed ride that<br/>
+						features many slides all converging into<br/>
+						a colder pool which has its temperature<br/>
+						constantly monitored and regulated. 
+					</p>
+					<img src="MFRide.jpg" style="width:820px; height:380px; border:solid blue 1px;">
+				</div>
+				
+				<div id="right" style="position:absolute; left:830px; background-color:Black; height:602px; border:solid Gold 2px; border-radius:20px;">
+					<img src="MFmsg.gif" style="width:810px; height:380px;"> <br/>
+					<img src="BuyTickets.gif" style="border:solid red 1px; position:relative; left:70px;">
+					<a href="merchandise.html" target="_blank"><img  src="BuyMerchandise.gif" style="border:solid purple 1px; position:relative; left:150px; top:10px;"></a>
+				</div>
+			</span>		
+		</div>
+	</div>
+	
+	
+</html>
